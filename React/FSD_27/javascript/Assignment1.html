@@ -12,25 +12,51 @@
             justify-content:center;
             align-items:center;
             min-height: 100vh;
+            background-color:antiquewhite
+        }
+        h1{
+            margin:0;
         }
         .card{
-            background-color:rgb(136, 219, 255);
+            background-color:rgb(213, 250, 102);
             height:300px;
             width:300px;
             border-radius:10px;
             padding:12px 20px;
+            box-shadow:0 0 5px black;
         }
         .heading{
             margin-left:65px;
             margin-top:10px;
+        }
+        .lists{
+            width:100px;
+            height:100px;
+            font-size:30px;
+            padding:5px 10px;
+            margin-bottom:20px;
+        }
+        .btn{
+            width: 100px;
+            height:30px;
+            margin-top:70px;
+            margin-left:95px;
+            border-radius:10px;
+            background-color:antiquewhite
         }
     </style>
 </head>
 <body>
     <div class="card">
         <h1 class="heading">Online Shop</h1>
-        <ul class="lists">
+        <div class="lists">
+        <ul>
+            <li>Rice:500</li>
+            <li>Tea:700</li>
+            <li>Coffee:800</li>
+            <li>Sugar:1000</li>
         </ul>
+        </div>
         <button class="btn">Buy Now</button><!--onclick:promp->"Enter your product name"-->
     </div>
     <script>
@@ -42,13 +68,6 @@
         };
 
         const list=document.querySelector(".lists");
-
-        list.innerHTML={
-            <li>cart.Rice</li>,
-            <li>cart.Tea</li>,
-            <li>cart.Coffe</li>,
-            <li>cart.sugar</li>
-        };
 
         const btn=document.querySelector(".btn");
 
