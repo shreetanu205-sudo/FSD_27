@@ -4,8 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            padding:0;
+            margin:0;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            min-height: 100vh;
+        }
+        .card{
+            background-color:rgb(136, 219, 255);
+            height:300px;
+            width:300px;
+            border-radius:10px;
+            padding:12px 20px;
+        }
+        .heading{
+            margin-left:65px;
+            margin-top:10px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="card">
+        <h1 class="heading">Online Shop</h1>
+        <ul class="lists">
+        </ul>
+        <button class="btn">Buy Now</button><!--onclick:promp->"Enter your product name"-->
+    </div>
+    <script>
+        let cart={
+            Rice:500,
+            Tea:700,
+            Coffee:800,
+            sugar:1000
+        };
+
+        const list=document.querySelector(".lists");
+
+        list.innerHTML={
+            <li>cart.Rice</li>,
+            <li>cart.Tea</li>,
+            <li>cart.Coffe</li>,
+            <li>cart.sugar</li>
+        };
+
+        const btn=document.querySelector(".btn");
+
+        btn.addEventListener("click",()=>{
+            prompt("Enter Prodcut name");
+        });
+
+    </script>
 </body>
 </html>
