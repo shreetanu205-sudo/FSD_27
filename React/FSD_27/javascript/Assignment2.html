@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin:0;
+        padding:0;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background-color:rgb(173, 138, 206);
+    }
+    .card{
+        background-color:rgb(42, 6, 74);
+        border:0.1rem solid black;
+        width:500px;
+        height:600px;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        padding:10px;
+        margin-top: 100px;
+    }
+    .header{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    .heading-text,.user-info,.bus-type,.bus-info{
+        color:white;
+    }
+    p{
+        color:white
+    }
+    .btn{
+        color:white;
+        background-color:rgb(7, 163, 35);
+        width:100px;
+        height:30px;
+        margin-left:200px;
+        margin-top:20px;
+        margin-bottom:20px;
+    }
+    .userInfo{
+        background-color:rgb(253, 139, 0);
+        text-align:center;
+        padding:5px;
+        margin:10px
+    }
+    .bus-info{
+        background-color:rgb(253, 139, 0);
+        text-align:center;
+        padding:5px;
+        margin:10px;
+    }
+    .user-input,.bus-output{
+        margin-left:10px;
+    }
+    .bus-image img{
+        border-radius: 50%;
+        margin:20px;
+    }
+</style>
+<body>
+    <div class="card">
+        <div class="header">
+            <div class="bus-image">
+                <img src="bus.jpg" width="70px" height="70px">
+            </div>
+            <h1 class="heading-text">Bus Booking System</h1>
+        </div>
+        <div class="userInfo" style="color:white">
+            User information
+        </div>
+        <div class="user-input">
+            <p>User Name</p>
+            <input type="text" placeholder="Enter your name" class="name">
+            <br>
+            <p>User Age</p>
+            <input type="number" placeholder="Enter your Age" class="Age">
+            <br>
+            <p>Aadhar Number</p>
+            <input placeholder="Enter Aadhar Number" class="aadhar">
+            <br>
+            <p>Select Your City</p>
+            <select class="City">
+                <option value="Mumbai">Mumbai</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Ranchi">Ranchi</option>
+                <option value="Agra">Agra</option>
+            </select>
+        </div>
+        <div class="bus-output">
+            <div class="bus-info">
+            Bus Information
+            </div>
+            <p>Choose Your bus Type</p>
+            <div class="bus-type">
+                <label>
+                    <input type="radio" name="type" value="AC">
+                    AC Rs 2000
+                </label>
+                <label>
+                    <input type="radio" name="type" value="Non-AC">
+                    Non-AC Rs 1200
+                </label>
+            </div>
+        </div>
+        <div class="result">
+
+        </div>
+        <button class="btn">Book now</button>
+    </div>
+    <script>
+        let btn=document.querySelector(".btn");
+
+        let name=document.querySelector(".name");
+        let age=document.querySelector(".age");
+        let aadhar=document.querySelector(".aadhar");
+        let city=document.querySelector("city");
+
+        let result=document.querySelector(".result");
+
+        btn.addEventListener("click",()=>{
+            let type=document.querySlector("input[name='type']:checked");
+
+            if(
+                name===""||
+                age===""||
+                aadhar===" "||
+                type===null
+            ){
+                alert("Fill the required fields");
+                return;
+            }
+
+            let total_cost;
+            
+        })
+    </script>
+</body>
+</html>
