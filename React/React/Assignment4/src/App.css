@@ -2,3 +2,12 @@
     margin:0px;
     padding:0px;
 }
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}
